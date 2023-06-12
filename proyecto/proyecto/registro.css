@@ -1,0 +1,283 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #e9820e;
+    --bg-secondary: #181714;
+    --transition-speed: 600ms;
+  }
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+    }
+body{
+    padding:0;
+    margin:0;  
+    box-sizing:border-box; 
+    background-color:black; 
+    color:white;
+    
+} 
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+ 
+
+ /* video  */
+
+.video{
+  position: flex;
+}
+video{
+  position: flex;
+    margin-left: 5rem;
+    top:0;
+    left: 0;
+    width: 94.6%;
+    height: 100%; 
+    object-fit: cover;
+    pointer-events: none;
+    object-fit: cover;
+    pointer-events: none; 
+} 
+
+
+/* barra de navegacion */
+
+main{
+  margin-left: 5rem;
+  padding: 1rem;
+}
+/* .contenido{
+  
+  } */
+.barra{
+  /* position: flex; */
+  /* padding-top: 30px; */
+  width:5rem;
+  height:100vh;
+  /* position:relative; */
+  display: flex;
+  position: fixed; 
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  
+  background-color: var(--bg-primary);
+  transition: width 600ms ease; 
+  /* overflow: scroll;   */
+}
+.barra-nav{
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100%;
+
+}
+.item {
+  width: 100%;
+}
+.item:last-child{
+  margin-top: auto;
+} 
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+} 
+
+.linktexto {
+  display: none;
+  margin-left: 1rem;
+  --bg-primary: #e9820e;
+  font-weight: bold;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  
+}
+
+.logo svg {
+ 
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.texto-logo
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.barra:hover .logo svg {
+  transform: rotate(-360deg);
+} 
+
+.barra:hover {
+  width: 16rem;
+  
+}
+
+.barra:hover .linktexto {
+  display: inline;
+}
+
+.barra:hover .logo svg
+{
+  margin-left: 12.5rem;
+}
+
+.barra:hover .texto-logo
+{
+  left: 0px;
+}
+.seccion1{
+  padding: 50px 50px;
+  align-items: center;
+  margin: 100px 100px;
+}
+
+.imgpresentacion{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.imgpresentacion .textopresentacion{
+  width: 48%;
+  justify-content: center;
+  padding: 50px 50px;
+}
+
+
+
+
+.arrastre{
+  max-width: 500px;
+  width: 100%;
+  background: #e9820e;
+  margin:20px auto;
+  padding: 30px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+}
+.arrastre .titulo{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #181714;
+  text-transform: uppercase;
+  text-align: center;
+}
+.arrastre .form .campo{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.arrastre .form .campo label{
+  font-size: 24px;
+  font-weight: 700;
+  width: 200px;
+  color: #181714;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.arrastre .form .campo .input{
+  width: 100%;
+  outline:  none;
+  border: 1px solid #111111;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.arrastre .form .campo .area{
+  width: 100%;
+  height: 125px;
+  outline:  none;
+  border: 1px solid #111111;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.arrastre .form .campo .seleccion{
+  position: relative;
+  width: 100%;
+  height: 40px;
+
+}
+.arrastre .form .campo .seleccion select{
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #181714;
+  width: 100%;
+  height: 100%;
+  padding: 8px 10px;
+  border-radius: 3px;
+  outline: none;
+}
+.arrastre .form .campo p{
+  font-size: 15px;
+  color: black;
+}
+.arrastre .form .campo .acepta{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.arrastre .form .campo .boton{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15x;
+  border: 0;
+  background: black;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.arrastre .form .campo .boton:hover{
+  background: #1e1e24 ;
+}

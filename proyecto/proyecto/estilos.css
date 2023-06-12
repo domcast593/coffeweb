@@ -1,0 +1,363 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #e9820e;
+    --bg-secondary: #181714;
+    --transition-speed: 600ms;
+  }
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+    }
+body{
+    padding:0;
+    margin:0;  
+    box-sizing:border-box; 
+    background-color:black; 
+    color:white;
+    
+} 
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+ 
+
+ /* video  */
+
+.video{
+  position: flex;
+}
+video{
+  position: flex;
+    margin-left: 5rem;
+    top:0;
+    left: 0;
+    width: 94.6%;
+    height: 100%; 
+    object-fit: cover;
+    pointer-events: none;
+    object-fit: cover;
+    pointer-events: none; 
+} 
+
+
+/* barra de navegacion */
+
+main{
+  margin-left: 5rem;
+  padding: 1rem;
+}
+/* .contenido{
+  
+  } */
+.barra{
+  /* position: flex; */
+  /* padding-top: 30px; */
+  width:5rem;
+  height:100vh;
+  /* position:relative; */
+  display: flex;
+  position: fixed; 
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  
+  background-color: var(--bg-primary);
+  transition: width 600ms ease; 
+  /* overflow: scroll;   */
+}
+.barra-nav{
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100%;
+
+}
+.item {
+  width: 100%;
+}
+.item:last-child{
+  margin-top: auto;
+} 
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+} 
+
+.linktexto {
+  display: none;
+  margin-left: 1rem;
+  --bg-primary: #e9820e;
+  font-weight: bold;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  
+}
+
+.logo svg {
+ 
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.texto-logo
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.barra:hover .logo svg {
+  transform: rotate(-360deg);
+} 
+
+.barra:hover {
+  width: 16rem;
+  
+}
+
+.barra:hover .linktexto {
+  display: inline;
+}
+
+.barra:hover .logo svg
+{
+  margin-left: 12.5rem;
+}
+
+.barra:hover .texto-logo
+{
+  left: 0px;
+}
+.seccion1{
+  padding: 50px 50px;
+  align-items: center;
+  margin: 100px 100px;
+}
+.formulario{
+  padding: 50px 50px;
+  align-items: center;
+  margin: 100px 100px;
+}
+.imgpresentacion{
+    display:flex;
+    justify-content:space-evenly;
+}
+.imgpresentacion .img1{
+  width: 70%;
+}
+.imgpresentacion .textopresentacion{
+  width: 48%;
+  justify-content: center;
+  padding: 50px 50px;
+}
+.imgpresentacion a{
+display: inline-block;
+  padding: 5px 30px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  
+}
+
+.imgpresentacion1{
+  display:flex;
+  justify-content:space-evenly;
+}
+.imgpresentacion1 .textopresentacion1{
+width: 60%;
+justify-content: center;
+}
+.imgpresentacion1 a{
+display: inline-block;
+padding: 5px 30px;
+background: #fff;
+border-radius: 4px;
+margin-top: 10px;
+text-decoration: none;
+font-weight: 600;
+color: #111;
+}
+/* cartas de productos  */
+.productos{
+  position: relative;
+
+  
+}
+.contenedorproducto{
+  position: relative;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 100px;
+}
+.contenedorproducto .carta{
+  position: relative;
+  width: 320px;
+    height: 600px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+  margin:10px;
+}
+.contenedorproducto .carta:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e9820e;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.contenedorproducto .carta:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+.contenedorproducto .carta:after{
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 600;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.contenedorproducto .carta .imagen{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.contenedorproducto .carta:hover .imagen{
+  top: 0%;
+  transform: translateY(0%);
+}
+.contenedorproducto .carta .imagen img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 300px;
+}
+.contenedorproducto .carta .contenidocaja{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+.contenedorproducto .carta:hover .contenidocaja{
+  height: 300px;
+}
+.contenedorproducto .carta .contenidocaja h2{
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: blanchedalmond;
+}
+
+.contenedorproducto .carta .contenidocaja .nivel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+}
+.contenedorproducto .carta .contenidocaja .nivel h3{
+  color: #e9820e;
+  font-weight: 300;
+  font-size: 14;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.contenedorproducto .carta .contenidocaja .nivel span{
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  background: #111;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contenedorproducto .carta .contenidocaja .nivel span:hover{
+  background: #e9820e;
+}
+.contenedorproducto .carta .contenidocaja a{
+  display: inline-block;
+  padding: 5px 30px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translate(50px);
+  transition: 0.5s; 
+  
+}
+.contenedorproducto .carta:hover .contenidocaja a{
+  opacity: 1;
+  transform: translatey(0px);
+  transition-delay: 0.75s;
+}
+
